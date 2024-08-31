@@ -1,0 +1,29 @@
+import React from 'react';
+type DataProps = {
+  title: string;
+  description: string;
+  image: string;
+}
+const AndroidDevelopment = ({ data }: { data: DataProps }) => {
+  return (
+    <div className=" max-w-7xl mx-auto px-4 sm:px-2 lg:px-8 flex flex-col px-6 md:flex-row items-start py-16 bg-white">
+      <div className="md:w-1/2">
+        <h3 className="text-sm font-semibold text-gray-500 mb-2">
+          {data.title.toUpperCase()}
+        </h3>
+        <h2 className="text-4xl font-bold mb-6 leading-tight">{data.subtitle}</h2>
+        <p className="text-lg text-gray-700 lg:pr-32 md:pr-2 leading-relaxed">{data.description}</p>
+      </div>
+      <div className="md:w-1/2  mt-8 md:mt-0 ">
+        <img
+          src={data.image}
+          alt={data.title}
+          className="w-full rounded-lg object-cover sm:w-full"
+          style={{width: '596px', height: '490px' }}
+        />
+      </div>
+    </div>
+  );
+};
+
+export default AndroidDevelopment;

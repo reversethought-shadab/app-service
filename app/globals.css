@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.icon-box-title:before {
+  content: "";
+  height: 32px;
+  width: 2px;
+  background: #22335E;
+  position: absolute;
+  margin-top: 2px;
+  margin-left: -6px;
+  border-radius: 5px;
+}
+/* Modal.css */
+.border-red-500 {
+  border-color: red;
+}
+
+.border-green-500 {
+  border-color: green;
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+@media (max-width: 1199px) {
+  .process-number{
+    left: 14rem !important;
+  }
+}
+@media (max-width: 992px) {
+  .process-number{
+    left: 11rem !important;
+    
+  }
+}
+@media (max-width: 767px) {
+  .process-number{
+    left: 8rem !important;
+
+  }
+}
+@media (max-width: 500px) {
+  .process-number{
+left: 10rem !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .process-number{
+left: 7rem !important;
+  }
+}
+@media (min-width: 280px) and (max-width: 330px) {
+  .process-number{
+
+  }
+}
