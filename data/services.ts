@@ -1,9 +1,17 @@
+import { title } from "process";
 import ServicesType from "./servicesType";
 
 export const servicesData = [
+
   {
     id: 0,
     slug: 'app-development',
+    hero:{
+      title: 'Mobile App Development Services',
+      // image: 'https://jetruby.com/wp-content/webp-express/webp-images/uploads/2023/03/5948e5c89e085dacc493d8f5a99cf1a2-1.jpg.webp',
+      description: "Nerasoft leverages modern technologies to deliver scalable and robust mobile app development services to digitize your business. With our app development services, we help SMEs, startups, and enterprise brands create exceptional digital products for seamless user interactions across various platforms.",
+      button: "Let's Connect"
+    },
     section1: {
       title: 'App development',
       services: [
@@ -73,8 +81,8 @@ export const servicesData = [
         },
         {
           id: 1,
-          title: "",
-          description: "",
+          title: "Moments NFC",
+          description: "Moments NFC is a Kotlin-based app that simplifies payments in pubs across the USA. There are two amazing things about this app. First, it allows you to pay for a drink with a mere wave of your hand. Just sync the app with your smartphone or a wristband with an NFC module and you’re ready to do magic! No more waiting to get your credit card payment approved. The second amazing thing is that our team built the entire app in just 12 days. We didn’t even have to create a new interface from scratch. We simply took the iOS app design and used it 'as is' to build the Kotlin app. Doing this saved our client a considerable amount of budget. Ultimately, we helped the client create a unique mobile application for the Android platform that allows pub customers to save time and make their nights out stress-free.",
           tags: ['Read article', 'View case study'],
           image: "https://jetruby.com/wp-content/webp-express/webp-images/uploads/tilda/1001490/pages/6589996/tild3537-6637-4762-b564-643636356166__moments_perview.png.webp",
         },
@@ -139,64 +147,57 @@ export const servicesData = [
         },
       ],
     },
-    benifitsAndroid: {
+    section7: {
       title: 'Android Apps',
       subTitle: 'Unlock Your Business Potential with a Mobile App',
-      benifitsTitle: [
+      benefitsData: [
         {
-          id: '0',
-          type: 'Android Apps',
-          icon: '/images/android.svg',
+          title: "Android Apps",
+          type:'android',
+          innerData: [
+            {
+              id: 0,
+              title: "Open Source",
+              description: "An open-source operating system simplifies the integration process and access to developers’ resources."
+            },
+            {
+              id: 1,
+              title: "Scalability",
+              description: "Android apps easily go together with the Internet of Things, Augmented Reality, and Virtual Reality."
+            },
+            {
+              id: 2,
+              title: "Security",
+              description: "As a Linux-based platform, it allows end-users to take advantage of the advanced security features underlying Linux. "
+            }
+          ]
+
         },
         {
-          id: '1',
-          type: 'iOS Apps',
-          icon: '/images/apple.svg',
-        },
-      ],
-      benifitsCard: [
-        {
-          id: '0',
-          title: 'Open Source',
-          description: 'An open-source operating system simplifies the integration process and access to developers’ resources.',
-          icon: '/images/android.svg',
-        },
-        {
-          id: '1',
-          title: 'Scalability',
-          description: 'Android apps easily go together with the Internet of Things, Augmented Reality, and Virtual Reality.',
-          icon: '/images/android.svg',
-        },
-        {
-          id: '2',
-          title: 'Security',
-          description: 'As a Linux-based platform, it allows end-users to take advantage of the advanced security features underlying Linux.',
-          icon: '/images/android.svg',
-        },
-        {
-          id: '3',
-          title: 'Reduced Development Time',
-          description: 'iOS apps require a relatively short development time and can be a great testing ground for your business opportunities.',
-          icon: '/images/apple.svg',
-        },
-        {
-          id: '4',
-          title: 'Tech-savvy & Loyal Users',
-          description: 'Apple has a community of tech-savvy and loyal customers, who are receptive to innovative solutions.',
-          icon: '/images/apple.svg',
-        },
-        {
-          id: '5',
-          title: 'Higher App Revenue',
-          description: 'It’s known that Apple users are more willing to use in-app paid services. Altogether, it boosts revenue generation.',
-          icon: '/images/apple.svg',
-        },
-      ],
+          title: "iOS Apps",
+          type:'ios',
+          innerData: [
+            {
+              title: "Reduced Development Time",
+              description: "iOS apps require a relatively short development time and can be a great testing ground for your business opportunities."
+            },
+            {
+              title: "Tech-savvy & Loyal Users",
+              description: "Apple has a community of tech-savvy and loyal customers, who are receptive to innovative solutions."
+            },
+            {
+              title: "Higher App Revenue",
+              description: "It’s known that Apple users are more willing to use in-app paid services. Altogether, it boosts revenue generation."
+            }
+          ]
+        }
+
+      ]
     },
     processAndroid: {
       subTitle: 'iOS App Development',
       title: 'Our iOS App Development process spans several stages',
-      image: '',
+      image: 'https://jetruby.com/wp-content/uploads/tilda/1001490/pages/8368283/tild6265-3461-4361-b264-616165653761__phone_jetr_2.svg',
       processCard: [
         {
           id: '0',

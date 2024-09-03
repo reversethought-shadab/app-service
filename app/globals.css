@@ -4,6 +4,9 @@
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+hero_bg_gradient {
+  background: linear-gradient(#7c40df 0%, #331856 100%);
+}
 .fade-in {
   animation: fadeIn 1s ease-in forwards;
   opacity: 0;

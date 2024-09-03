@@ -28,7 +28,7 @@ export default function Header() {
               </div>
             </div>
           </div>
-          <button onClick={handleOpenModal} className="bg-blue-900 text-white px-8 py-3 rounded-full">Contact</button>
+          <button onClick={handleOpenModal} className="bg-[#22335E] text-white px-8 py-3 rounded-full">Contact</button>
         </div>
       </header>
       <Modal isOpen={isModalOpen} onClose={handleCloseModal} />

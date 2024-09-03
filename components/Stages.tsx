@@ -1,21 +1,26 @@
 // pages/stages.js
 "use client"
 import React from 'react';
+interface P {
+  data: any;
+}
 
-const Stages = () => {
+
+const Stages: React.FC<P> = ({ data }) => {
   return (
     <section className='bg-black p-8 '>
 
     <div className="relative flex flex-col max-w-7xl mx-auto lg:flex-row h-screen  text-white overflow-hidden">
       
       {/* Left Side - Fixed Section */}
-      <div className="lg:w-1/2 px-10 flex items-center flex-col justify-center  lg:h-full">
+      <div className="lg:w-1/2 px-10 flex  text-left flex-col justify-center  ">
+     <p>{data.subTitle}</p>
         <h1 className="text-4xl font-bold leading-tight mb-10 fade-in">
-          Our iOS App Development process spans several stages
+          {data.title}
         </h1>
       
           <img
-            src="https://jetruby.com/wp-content/uploads/tilda/1001490/pages/8368283/tild6265-3461-4361-b264-616165653761__phone_jetr_2.svg"
+            src={data.image}
             alt="iOS App Development"
             />
         </div>
@@ -25,17 +30,13 @@ const Stages = () => {
         <div className="max-w-lg mx-auto space-y-10">
           {/* Scrollable Content Sections */}
           <div className="space-y-8">
-            {["We discover and discuss your iOS app idea and study your target audience",
-              "We start with the UI/UX design process",
-              "We kick off the iOS development process and prepare a fully functional MVP",
-              "We start working on iOS app deployment and release",
-              "We also provide iOS app maintenance and support services"].map((text, index) => (
-                  <div key={`stage-${index}`} className="bg-gray-900 p-6 rounded-lg shadow-lg slide-in">
-                <div className="text-2xl font-semibold mb-2 ">{index + 1}</div>
-                <p className="text-lg">{text}</p>
-              </div>
-            ))}
-          </div>
+        {data.processCard.map((card:any) => (
+        <div key={card.id} className="bg-gray-900 p-6 rounded-lg shadow-lg slide-in">
+          <div className="text-2xl font-semibold mb-2">{card.number}</div>
+          <p className="text-lg">{card.description}</p>
+        </div>
+      ))}
+    </div>
         </div>
       </div>
     </div>

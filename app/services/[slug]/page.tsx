@@ -11,6 +11,9 @@ import Cta from '@/components/Cta';
 import IosDevlopment from '@/components/IosDevlopment';
 import Benefits from '@/components/Benifits';
 import Stages from '@/components/Stages';
+import Hero from '@/components/Hero';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
 
 const page = () => {
     const params = useParams();
@@ -26,14 +29,18 @@ const page = () => {
     return (
         <div >
       <Header/>
+      <Hero data={serviceData}/>
       <AppDevelopment data={serviceData}/>
       <AndroidDevelopment data={serviceData}/>
       <Process data={serviceData}/>
       <SuccessStory data={serviceData}/>
-      {/* <Cta data={serviceData}/> */}
-      {/* <IosDevlopment data={serviceData}/> */}
-      {/* <Benefits data={serviceData}/> */}
-      {/* <Stages data={serviceData}/> */}
+      <Cta data={serviceData.section5[0]}/>
+      {/* <Cta data={serviceData.section5[1]}/> */}
+      <IosDevlopment data={serviceData.section6}/>
+      <Benefits data={serviceData}/>
+      <Stages data={serviceData.processAndroid}/>
+      <Contact/>
+      <Footer/>
     </div>
     )
 }
